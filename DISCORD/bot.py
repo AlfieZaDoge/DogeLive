@@ -19,7 +19,7 @@ class MyBot(commands.Cog):
 
     @app_commands.command(name="source", description="Shows the source code for DogeLive Bot!")
     async def source(self, interaction: discord.Interaction):
-        await interaction.response.send_message("Here's my source code: ", ephemeral=True)
+        await interaction.response.send_message("Here's my source code: https://github.com/AlfieZaDoge/DogeLive", ephemeral=True)
 
 @bot.event
 async def on_ready():
