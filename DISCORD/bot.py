@@ -29,7 +29,7 @@ class MyBot(commands.Cog):
         bot_id = self.bot.user.id
         invite_url = f"https://discord.com/oauth2/authorize?client_id=1394358248525529118&permissions=277294017648&integration_type=0&scope=bot" # so this invite link does not just give all perms it gives all the ones it needs i think ..
         await interaction.response.send_message(
-            f"Add me to your server using this invite link: {invite_url}", ephemeral=True
+            f"Add me to your server using this [Invite link]({invite_url})", ephemeral=True
         )
 
     def cog_app_commands(self):
