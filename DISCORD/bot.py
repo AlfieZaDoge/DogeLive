@@ -8,7 +8,6 @@ import asyncio
 intents = discord.Intents.all()  # grab all the damn intents
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Load config.json like a responsible bot owner
 config_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../config.json'))
 with open(config_path, 'r') as f:
     config = json.load(f)
@@ -25,7 +24,6 @@ class MyBot(commands.Cog):
             "Here's my source code: https://github.com/AlfieZaDoge/DogeLive", ephemeral=True
         )
 
-    # /invite – for those cool enough to want this bot 😎
     @app_commands.command(name="invite", description="Sends an invite to add the bot to your own server")
     async def invite(self, interaction: discord.Interaction):
         bot_id = self.bot.user.id
@@ -39,7 +37,7 @@ class MyBot(commands.Cog):
 
 @bot.event
 async def on_ready():
-    print(f"Logged in as {bot.user} (ID: {bot.user.id}) – let's f**king go 🚀")
+    print(f"Logged in as {bot.user} (ID: {bot.user.id}) i love doge :O")
     try:
         synced = await bot.tree.sync()
         print(f"Synced {len(synced)} command(s) – no errors, no drama")
