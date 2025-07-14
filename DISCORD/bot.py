@@ -27,7 +27,7 @@ class MyBot(commands.Cog):
     @app_commands.command(name="invite", description="Sends an invite to add the bot to your own server")
     async def invite(self, interaction: discord.Interaction):
         bot_id = self.bot.user.id
-        invite_url = f"https://discord.com/api/oauth2/authorize?client_id={bot_id}&permissions=8&scope=bot+applications.commands"
+        invite_url = f"https://discord.com/oauth2/authorize?client_id=1394358248525529118&permissions=277294017648&integration_type=0&scope=bot" # so this invite link does not just give all perms it gives all the ones it needs i think ..
         await interaction.response.send_message(
             f"Add me to your server using this invite link: {invite_url}", ephemeral=True
         )
